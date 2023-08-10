@@ -1,0 +1,56 @@
+// Primary Colors
+$bg-light: #F8F8FF;
+$bg-dark: #000000;
+
+$black: #000000;
+$white: #FFFFFF;
+$dark-purple: #52057B;
+$purple: #892CDC;
+$light-purple: #BC6FF1;
+
+// Fonts
+$fonts: (
+    "body": 'Quicksand', sans-serif,
+    "header": 'Moirai One', 'cursive'
+);
+
+@function ff($font) {
+    @return map-get($fonts, $font);
+}
+
+// Font Weights
+$font-weight: (
+    "300": 300,
+    "400": 400,
+    "600": 600
+);
+
+@function fw($weight) {
+    @return map-get($font-weight, $weight);
+}
+
+// Font Sizes
+$font-sizes: (
+    "p": 16px,
+    "h1": 25px,
+    "h2": 22px,
+    "h3": 18px,
+    "fine-text": 14px
+);
+
+@function fs($size) {
+    @return map-get($font-sizes, $size);
+}
+
+// Text Decoration
+$text-decoration: (
+    "italic" : italic,
+    "uppercase" : uppercase,
+    "lowercase" : lowercase,
+    "underline" : underline,
+    "line-through" : line-through,
+);
+
+@function td($decoration) {
+    @return map-get($text-decoration, $decoration);
+}
