@@ -1,0 +1,83 @@
+@import "./reset";
+@import "./variables";
+
+html, body {
+    font-family: $ff-body;
+    font-weight: fw(400);
+    font-size: fs(p);
+    color: $black;
+    background-color: $bg-light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $ff-header;
+    font-weight: fw(600);
+    color: $dark-purple; 
+}
+
+main {
+    @include flex(column);
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 2rem;
+}
+
+@media screen and (min-width: 55rem) {
+    main {
+        margin: 8rem 13rem;
+    }
+}
+
+section {
+    margin-top: 4rem;
+}
+
+a {
+    color: $light-purple;
+    font-weight: fw(300);
+    text-decoration: none;
+}
+
+i {
+    padding: 0 0.2rem;
+    color: $white;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    display: inline-block;
+    width: fit-content;
+    color: $white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 25px;
+    font-weight: fw(300);
+    border: 2px solid $light-purple;
+    background-color: $dark-purple;
+}
+
+button a, button i {
+    color: $white;
+}
+
+button:hover {
+    color: $black;
+    border: 2px solid $dark-purple;
+    background-color: $light-purple;
+}
+
+.title {
+    font-size: fs(h1);
+}
+
+.subtitle {
+    color: $light-purple;
+    font-size: fs(h3);
+    text-transform: td(lowercase);
+}
+
+.description {
+    padding: 1rem 0;
+}

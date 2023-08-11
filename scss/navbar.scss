@@ -1,0 +1,125 @@
+@import "./reset";
+@import "./variables";
+
+// NAVIGATION BAR
+header {
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+    z-index: 9999;
+    position: fixed;
+    background-color: $bg-light;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+}
+
+nav {
+    max-width: 100%;
+    margin: 0 1.5rem;
+    height: 3.5rem;
+    @include flex(row);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.nav__menu {
+    background-color: $bg-light;
+}
+
+.nav__logo, i, .nav__number {
+    color: $dark-purple;
+    font-weight: fw(600);
+}
+
+.nav__logo {
+    font-size: 2rem;
+    font-family: $ff-header;
+    text-transform: td(uppercase);
+}
+
+.nav__logo:hover, .nav__link:hover, .nav__toggle i:hover {
+    cursor: pointer;
+    color: $light-purple;
+}
+
+.nav__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.nav__link {
+    padding: 0.5em;
+    @include flex(column);
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__number {
+    margin-right: 0.5em;
+    font-size: 1.2rem;
+    font-weight: fw(600);
+}
+
+.nav__btn {
+    font-size: 1.3rem;
+}
+
+.nav__close {
+    display: none;
+    right: 1.45rem;
+    bottom: 0.8rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    position: absolute;
+    color: $light-purple;
+}
+
+// for mobile/tablets
+@media screen and (max-width: 55rem) {
+    .nav__menu {
+        left: 0;
+        width: 100%; 
+        bottom: -100%;
+        position: fixed;
+        transition: .5s;
+        border-radius: 15px;
+        padding: 2rem 1.5rem 4rem;
+        background-color: $bg-light;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+    }
+}
+
+// for desktop
+@media screen and (min-width: 55.1rem) {
+    header {
+        top: 0;
+        margin-bottom: 5rem;
+    }
+    .nav__togglers {
+        display: none;
+    }
+    .nav__menu{
+        bottom: 0;
+    }
+    .nav__list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    .nav__link {
+        @include flex(row);
+    }
+}
+
+.show-menu { /*js menu visibility toggle*/
+    bottom: 0%;
+    transition: .5s;
+}
+
+.hide-icon { /*js menu icon visibility toggle*/
+    display: none;
+}
+
+.show-icon { /*js menu icon visibility toggle*/
+    display: block;
+}

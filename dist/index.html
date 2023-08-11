@@ -1,33 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Moirai+One&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+        <!-- FONTS -->
+        <!-- imported into _variables.scss-->
 
-    <!-- FONT AWESOME -->
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="./resources/css/generalStyles.css">
-    <link rel="stylesheet" href="./resources//css/main.css">
+        <!-- ICONS -->
+        <script src="https://kit.fontawesome.com/fc88c1d343.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-    <!-- JS -->
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/generalStyles.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+        <link rel="stylesheet" href="./css/main.css">
+
+        <!-- JS -->
+        <script src="./js/app.js" defer></script>
+
+        <!-- Browser Icon -->
 
 
-    <!-- Browser Icon -->
+        <title>Chyna Davis</title>
+    </head>
 
+    <body>
+        <!-- NAVIGATION BAR -->
+        <header>
+            <nav>
+                <a href="#home" class="nav__logo">Chyna</a>
 
-    <title>Chyna Davis</title>
-</head>
-<body>
-    <header></header>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link"><span class="nav__number">01.</span>About Me</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link"><span class="nav__number">02.</span>Technical Skills</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link"><span class="nav__number">03.</span>Projects</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link"><span class="nav__number">04.</span>Contact</a>
+                        </li>
+                    </ul>
+                </div>
 
-    <main></main>
+                <div class="nav__togglers">
+                    <i class="fa-solid fa-list nav__btn" id="nav-btn"></i>
+                    <i class="fa-solid fa-xmark nav__close" id="nav-close"></i>
+                </div> 
+            </nav>
+        </header>
 
-    <footer></footer>
-</body>
+        <main>
+            <!-- HOME -->
+            <section class="home" id="home">
+                <div class="home__content">
+                    <div class="home__profile">
+                        <div class="home__contacts">
+                            <a href="mailto:cdavis2757@gmail.com"><i class="fa-solid fa-at contact-icon"></i></a>
+                            <a href="https://www.linkedin.com/in/chynamdavis/" target="_blank"><i class="fa-brands fa-linkedin-in contact-icon"></i></a>
+                            <a href="https://github.com/cmdavis21" target="_blank"><i class="fa-brands fa-github contact-icon"></i></a>
+                        </div>
+                        <img src="./images/profile_img.svg" width="400px">
+                    </div>
+
+                    <div class="home__text">
+                        <h1 class="title">I'm Chyna</h1>
+                        <p class="subtitle">A Full-Stack Developer and Marketer</p>
+                        <p>With a passion for making beautiful website layouts.</p>
+                        <button><a href="mailto:cdavis2757@gmail.com" class="contact-btn"><i class="fa-regular fa-paper-plane"></i> Contact me</a></button>
+
+                        <div class="home__scroll-down">
+                            <a href="#About">
+                                <span>Scroll down</span>
+                                <i class="fa-solid fa-caret-down home__scroll-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+
+            <!-- ABOUT -->
+            <section class="about" id="about">
+                <div class="about__content">
+                    <h2 class="title">About Me</h2>
+                    <span class="subtitle">A learning developer...</span>
+                    <p class="description">After completing a degree in Marketing and gaining experience in the industry, I discovered my passion for creative UI design and building complex backend software that powers seamless frontend functionality. I actively seek opportunities to continuously learn and develop my skills for the client's and/or team's success. Explore my portfolio and contact me for potential collaborations or exciting job opportunities.</p>
+                    <button><a href="https://drive.google.com/file/d/1MP9uzVKxj-NHjGJ0YV7rFTbRwDo_F8TH/view?usp=sharing" target="_blank">Download resume <i class="fa-solid fa-download"></i></a></button>
+                </div>
+            </section>
+
+            <!-- SKILLS -->
+            <section class="skills" id="skills">
+                <h2 class="title">Experience</h2>
+                <span class="subtitle">Technical Skills and Certifications</span>
+                <div class="skills__container">
+                    <!-- FRONTEND SKILLS -->
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
+                            <div>
+                                <i class="fa-solid fa-code skill-icon"></i> 
+                                <p class="skill__title">Frontend Developer</p>
+                            </div>
+                            <i class="fa-solid fa-caret-down skill-arrow"></i> <!-- For dropdown -->
+                        </div>
+
+                        <div class="skills__list">
+                            <div class="skills__data">
+                                <i class="fa-brands fa-html5 skill-icon"></i>
+                                <p class="skill">HTML</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-brands fa-css3-alt skill-icon"></i>
+                                <p class="skill">CSS</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-brands fa-sass skill-icon"></i>
+                                <p class="skill">SCSS</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-brands fa-square-js skill-icon"></i>
+                                <p class="skill">JavaScript</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-brands fa-bootstrap skill-icon"></i>
+                                <p class="skill">Bootstrap</p>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <!-- BACKEND SKILLS -->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <div>
+                                <i class="fa-solid fa-server skill-icon"></i>
+                                <p class="skill__title">Backend Developer</p>
+                            </div>
+                            <i class="fa-solid fa-caret-down skill-arrow"></i> <!-- For dropdown -->
+                        </div>
+
+                        <div class="skills__list">
+                            <div class="skills__data">
+                                <i class="fa-brands fa-java skill-icon"></i>
+                                <p class="skill">Java</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="devicon-spring-plain skill-icon"></i>
+                                <p class="skill">Spring Boot, Spring Data JPA, and Spring Security (JWT)</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-solid fa-cloud-arrow-up skill-icon"></i>
+                                <p class="skill">REST API's</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="devicon-mysql-plain skill-icon"></i>
+                                <p class="skill">SQL</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-solid fa-vial-virus skill-icon"></i>
+                                <p class="skill">Unit Testing (JUnit, Mockito)</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-solid fa-layer-group skill-icon"></i>
+                                <p class="skill">SOLID OOP Principles</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-solid fa-plug skill-icon"></i>
+                                <p class="skill">Dependency Injection</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-brands fa-docker skill-icon"></i>
+                                <p class="skill">Docker</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OTHER SKILLS -->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <div>
+                                <i class="fa-solid fa-code-branch skill-icon"></i>
+                                <p class="skill__title">Other Skills</p>
+                            </div>
+                            <i class="fa-solid fa-caret-down skill-arrow"></i> <!-- For dropdown -->
+                        </div>
+
+                        <div class="skills__list">
+                            <div class="skills__data">
+                                <i class="devicon-git-plain skill-icon"></i>                
+                                <p class="skill">Git</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="devicon-canva-original skill-icon"></i>                
+                                <p class="skill">Canva</p>
+                            </div>
+                            <div class="skills__data">
+                                <i class="devicon-figma-plain skill-icon"></i>                         
+                                <p class="skill">Figma</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CERTIFICATIONS -->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header"> 
+                            <div>
+                                <i class="fa-solid fa-award skill-icon"></i>  
+                                <p class="skill__title">Certifications</p>
+                            </div>
+                            <i class="fa-solid fa-caret-down skill-arrow"></i> <!-- For dropdown -->
+                        </div>
+
+                        <div class="skills__list">
+                            <div class="skills__data">             
+                                <p class="skill">Certified JavaScript Developer</p>
+                                <p>w3schools | May 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <!-- CONTACT -->
+            <section class="contact" id="contact">
+                <h2 class="title">Contact</h2>
+                <button>
+                    <p>Email me directly</span>
+                    <a href="mailto:cdavis2757@gmail.com"><i class="fa-solid fa-reply"></i></a>
+                </button>
+                
+                <p>And View My Socials</p>
+                <button><a href="https://www.linkedin.com/in/chynamdavis/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></button>
+                <button><a href="https://github.com/cmdavis21" target="_blank"><i class="fa-brands fa-github"></i></a></button>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; Chyna Davis 2023</p>
+        </footer>
+    </body>
 </html>
