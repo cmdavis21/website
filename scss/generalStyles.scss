@@ -2,16 +2,13 @@
 @import "./variables";
 
 html, body {
+    width: 100vw;
+    overflow-x: hidden;
     font-family: $ff-body;
     font-weight: fw(400);
     font-size: fs(p);
     color: $black;
     background-color: $bg-light;
-}
-
-body {
-    width: 100vw;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {

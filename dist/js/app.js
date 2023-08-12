@@ -33,7 +33,6 @@ navLinks.forEach(function(navLink) {
 });
 
 
-
 //===================== ACCORDION SKILLS TABS =====================//
 const skillsContent = document.getElementsByClassName("skills__content");
 const skillsHeader = document.querySelectorAll(".skills__header");
@@ -55,6 +54,7 @@ skillsHeader.forEach((element) => {
   element.addEventListener("click", toggleSkills);
   element.addEventListener("touchstart", toggleSkills);
 });
+
 
 //===================== PROJECTS SWIPER CAROUSEL =====================//
 const swiper = new Swiper(".swiper", {
