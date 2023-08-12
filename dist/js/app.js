@@ -18,16 +18,20 @@ function toggleMenu() {
   navClose.classList.toggle("show-icon");
 }
 
-// Event listener for navBtn click
+// Event listener for navBtn click and touch events
 navBtn.addEventListener("click", toggleMenu);
+navBtn.addEventListener("touchstart", toggleMenu);
 
-// Event listener for navClose click
+// Event listener for navClose click and touch events
 navClose.addEventListener("click", toggleMenu);
+navClose.addEventListener("touchstart", toggleMenu);
 
-// Loop through each nav link and add event listener
+// Loop through each nav link and add event listeners for click and touch events
 navLinks.forEach(function(navLink) {
   navLink.addEventListener("click", toggleMenu);
+  navLink.addEventListener("touchstart", toggleMenu);
 });
+
 
 
 //===================== ACCORDION SKILLS TABS =====================//
@@ -49,6 +53,7 @@ function toggleSkills() {
 
 skillsHeader.forEach((element) => {
   element.addEventListener("click", toggleSkills);
+  element.addEventListener("touchstart", toggleSkills);
 });
 
 //===================== PROJECTS SWIPER CAROUSEL =====================//
