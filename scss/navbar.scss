@@ -8,8 +8,9 @@ header {
     height: 3.5rem;
     z-index: 9999;
     position: fixed;
+    border-radius: 0 0 30px 30px;
     background-color: $bg-light;
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .4);
 }
 
 nav {
@@ -19,33 +20,29 @@ nav {
     @include flex(row);
     justify-content: space-between;
     align-items: center;
-    border-radius: 25px;
 }
 
 .nav__menu {
     background-color: $bg-light;
 }
 
-.nav__logo, i, .nav__number {
+i, .nav__number {
     color: $dark-purple;
     font-weight: fw(600);
 }
 
-.nav__logo {
-    font-size: 2rem;
-    font-family: $ff-header;
-    text-transform: td(uppercase);
-}
-
-.nav__logo:hover, .nav__link:hover, .nav__toggle i:hover {
+.nav__link:hover, .nav__toggle i:hover {
     cursor: pointer;
     color: $light-purple;
+    transition: 500ms ease-in-out;
+    border-radius: 30px;
+    background-color: hsla(240, 100%, 99%, .5);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .3);
 }
 
 .nav__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .nav__link {
@@ -54,6 +51,7 @@ nav {
     align-items: center;
     justify-content: center;
 }
+
 
 .nav__number {
     margin-right: 0.5em;
@@ -75,18 +73,28 @@ nav {
     color: $light-purple;
 }
 
-// for mobile/tablets
+// for mobile
 @media screen and (max-width: 55rem) {
+    header {
+        border-radius: 30px 30px 0 0;
+    }
     .nav__menu {
         left: 0;
         width: 100%; 
         bottom: -100%;
         position: fixed;
         transition: .5s;
-        border-radius: 15px;
+        border-radius: 30px 30px 0 0;
         padding: 2rem 1.5rem 4rem;
         background-color: $bg-light;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .4);
+    }
+}
+
+// for tablets
+@media screen and (min-width: 47rem) {
+    .nav__list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -101,10 +109,6 @@ nav {
     }
     .nav__menu{
         bottom: 0;
-    }
-    .nav__list {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
     }
     .nav__link {
         @include flex(row);

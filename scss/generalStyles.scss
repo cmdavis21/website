@@ -19,17 +19,19 @@ main {
     @include flex(column);
     justify-content: center;
     align-items: center;
-    margin: 3rem 2rem;
+    margin: 3rem 2rem 0;
+    background-image: url("../dist/images/texture-bg.png");
+    background-repeat: repeat;
 }
 
 @media screen and (min-width: 55rem) {
     main {
-        margin: 8rem 13rem;
+        margin: 8rem 13rem 0;
     }
 }
 
 section {
-    margin-top: 4rem;
+    margin-bottom: 5rem;
 }
 
 a {
@@ -54,6 +56,7 @@ button {
     padding: 0.3rem 0.8rem;
     border-radius: 25px;
     font-weight: fw(300);
+    margin-top: 3rem;
     border: 2px solid $light-purple;
     background-color: $dark-purple;
 }
@@ -79,5 +82,19 @@ button:hover {
 }
 
 .description {
-    padding: 1rem 0;
+    padding: 1rem 0 0;
+}
+
+.logo {
+    color: $dark-purple;
+    font-weight: fw(600);
+    font-size: 2rem;
+    font-family: $ff-header;
+    text-transform: td(uppercase);
+}
+
+.logo:hover {
+    cursor: pointer;
+    color: $light-purple;
+    transition: 500ms ease-in-out;
 }

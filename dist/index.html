@@ -14,13 +14,16 @@
         <!-- CSS -->
         <link rel="stylesheet" href="./css/generalStyles.css">
         <link rel="stylesheet" href="./css/navbar.css">
+        <link rel="stylesheet" href="./css/footer.css">
         <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
         <!-- JS -->
         <script src="./js/app.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
         <!-- Browser Icon -->
-
+        <link rel="icon" type="image/icon" href="./images/browser-icon.png">
 
         <title>Chyna Davis</title>
     </head>
@@ -29,7 +32,7 @@
         <!-- NAVIGATION BAR -->
         <header>
             <nav>
-                <a href="#home" class="nav__logo">Chyna</a>
+                <a href="#home" class="logo">Chyna</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
@@ -41,9 +44,6 @@
                         </li>
                         <li class="nav__item">
                             <a href="#projects" class="nav__link"><span class="nav__number">03.</span>Projects</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link"><span class="nav__number">04.</span>Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -65,13 +65,13 @@
                             <a href="https://www.linkedin.com/in/chynamdavis/" target="_blank"><i class="fa-brands fa-linkedin-in contact-icon"></i></a>
                             <a href="https://github.com/cmdavis21" target="_blank"><i class="fa-brands fa-github contact-icon"></i></a>
                         </div>
-                        <img src="./images/profile_img.svg" width="400px">
+                        <img src="./images/profile_img.png" width="500px">
                     </div>
 
                     <div class="home__text">
-                        <h1 class="title">I'm Chyna</h1>
-                        <p class="subtitle">A Full-Stack Developer and Marketer</p>
-                        <p>With a passion for making beautiful website layouts.</p>
+                        <h1 class="home__title title">I'm Chyna</h1>
+                        <p class="home__subtitle subtitle">A Full-Stack Developer and Marketer</p>
+                        <p class="description">With a passion for making beautiful website layouts.</p>
                         <button><a href="mailto:cdavis2757@gmail.com" class="contact-btn"><i class="fa-regular fa-paper-plane"></i> Contact me</a></button>
 
                         <div class="home__scroll-down">
@@ -224,24 +224,83 @@
                     </div>
                 </div>
             </section>
-            
-            
-            <!-- CONTACT -->
-            <section class="contact" id="contact">
-                <h2 class="title">Contact</h2>
-                <button>
-                    <p>Email me directly</span>
-                    <a href="mailto:cdavis2757@gmail.com"><i class="fa-solid fa-reply"></i></a>
-                </button>
-                
-                <p>And View My Socials</p>
-                <button><a href="https://www.linkedin.com/in/chynamdavis/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></button>
-                <button><a href="https://github.com/cmdavis21" target="_blank"><i class="fa-brands fa-github"></i></a></button>
+
+            <!-- PROJECTS CAROUSEL -->
+            <section class="projects" id="projects">
+                <h2 class="title">Featured Projects</h2>
+                <span class="subtitle">and recent work</span>
+                <div class="projects__container swiper">
+                    <div class="swiper-wrapper">
+                        <!-- PROJECT 1 -->
+                        <div class="projects__content swiper-slide">
+                            <img src="./images/coming-soon.png" class="project-img" alt="">
+                            <div class="project__data">
+                                <h3 class="project__title">Lorem ipsum dolor</h3>
+                                <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button><a href="#">Github Repo</a></button>
+                                <button><a href="#">View Live Project</a></button>
+                            </div>
+                        </div>
+
+                        <!-- PROJECT 2 -->
+                        <div class="projects__content swiper-slide">
+                            <img src="./images/coming-soon.png" class="project-img" alt="">
+                            <div class="project__data">
+                                <h3 class="project__title">Lorem ipsum dolor</h3>
+                                <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button><a href="#">Github Repo</a></button>
+                                <button><a href="#">View Live Project</a></button>
+                            </div>
+                        </div>
+
+                        <!-- PROJECT 3 -->
+                        <div class="projects__content swiper-slide">
+                            <img src="./images/coming-soon.png" class="project-img" alt="">
+                            <div class="project__data">
+                                <h3 class="project__title">Lorem ipsum dolor</h3>
+                                <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button><a href="#">Github Repo</a></button>
+                                <button><a href="#">View Live Project</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
             </section>
+
+            <!-- <h2 class="section__title">Other Projects</h2> -->
+            <!-- grid tiles display auto rows/columns of projects -->
+            <!-- js/java inject tiles into here -->
+            <!-- tile ideas: http://findmatthew.com/ -->     
         </main>
 
         <footer>
-            <p>&copy; Chyna Davis 2023</p>
+            <div class="footer__content">
+                <a href="#home" class="logo">Chyna</a>
+                <div class="footer__menu">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#about">About Me</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#skills">Technical Skills</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#projects">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:cdavis2757@gmail.com"><i class="fa-solid fa-at contact-icon"></i></a>
+                    <a href="https://www.linkedin.com/in/chynamdavis/" target="_blank"><i class="fa-brands fa-linkedin-in contact-icon"></i></a>
+                    <a href="https://github.com/cmdavis21" target="_blank"><i class="fa-brands fa-github contact-icon"></i></a>
+                </div>
+            </div>
+            <p class="copyright">&copy; Chyna Davis 2023</p>
         </footer>
     </body>
 </html>

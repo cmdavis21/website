@@ -1,3 +1,10 @@
+// import Swiper bundle with all modules installed
+import Swiper from 'swiper/bundle';
+
+// import styles bundle
+import 'swiper/css/bundle';
+
+
 //===================== MOBILE NAVBAR TOGGLE =====================//
 const navMenu = document.getElementById("nav-menu");
 const navLinks = document.querySelectorAll(".nav__link");
@@ -45,15 +52,19 @@ skillsHeader.forEach((element) => {
 });
 
 //===================== PROJECTS SWIPER CAROUSEL =====================//
-// let swiper = new Swiper(".projects__container", {
-//   cssMode: true,
-//   loop: true,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
+const swiper = new Swiper(".swiper", {
+  cssMode: true,
+  loop: true,
+  direction: 'horizontal',
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});

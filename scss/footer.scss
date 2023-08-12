@@ -1,0 +1,68 @@
+@import "./reset";
+@import "./variables";
+
+// FOOTER
+footer {
+    width: 100%;
+    color: $white;
+    bottom: 0;
+    z-index: 9000;
+    position: relative;
+    border-radius: 30px 30px 0 0;
+    background-color: $dark-purple;
+}
+
+.footer__content {
+    @include grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+
+    & .logo, .contact-icon {
+        color: $white;
+    }
+
+    & .logo {
+        font-size: 2.5rem;
+        animation: shift 1.5s infinite;
+    }
+
+    & .social-links {
+        @include flex(row);
+    }
+
+    & .contact-icon {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+
+    & .contact-icon:hover {
+        color: $light-purple;
+    }
+}
+
+@media screen and (min-width: 55rem) {
+    .footer__content {
+        grid-template-columns: repeat(3, 1fr);
+
+        & .logo:hover {
+            font-size: 2.8rem;
+            transition: font-size 200ms ease-out;
+        }
+    }
+}
+
+.footer__list {
+    @include grid;
+    grid-row: 1 / 2;
+}
+
+.footer__item a {
+    color: $white;
+}
+
+.copyright {
+    color: grey;
+    text-align: center;
+}
