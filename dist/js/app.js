@@ -1,10 +1,3 @@
-// import Swiper bundle with all modules installed
-import Swiper from 'swiper/bundle';
-
-// import styles bundle
-import 'swiper/css/bundle';
-
-
 //===================== MOBILE NAVBAR TOGGLE =====================//
 const navMenu = document.getElementById("nav-menu");
 const navLinks = document.querySelectorAll(".nav__link");
