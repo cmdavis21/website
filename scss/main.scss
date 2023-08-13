@@ -42,8 +42,11 @@
     
 }
 
-.contact-btn i {
-    animation: shift 1.5s infinite;
+.contact-btn:hover {
+    &_i {
+        animation: shift 1.5s infinite;
+    }
+    
 }
 
 .home__scroll-down {
@@ -158,9 +161,13 @@
 }
 
 // PROJECTS
-.swiper {
-    width: 600px;
-    height: 600px;
+// .swiper {
+//     width: 600px;
+//     height: 600px;
+// }
+
+.swipper-wrapper {
+    height: auto;
 }
 
 .project-img {
