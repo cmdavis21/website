@@ -1,6 +1,10 @@
 @import "./reset";
 @import "./variables";
 
+* {
+    outline: 2px solid green;
+}
+
 html, body {
     overflow-x: hidden;
     font-family: $ff-body;
