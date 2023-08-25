@@ -1,13 +1,11 @@
 @import "./reset";
 @import "./variables";
 
-* {
-    border: 2px solid blue;
-    outline: 2px solid green;
-}
+// * {
+//     outline: 2px solid green;
+// }
 
 html, body {
-    width: 100vw;
     font-family: $ff-body;
     font-weight: fw(400);
     font-size: fs(p);
@@ -17,6 +15,7 @@ html, body {
 
 body {
     @include flex(column);
+    justify-content: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,10 +27,11 @@ h1, h2, h3, h4, h5, h6 {
 main {
     @include flex(column);
     justify-content: center;
-    align-items: center;
     margin: 3rem 2rem 0;
+    width: 95%;
 }
 
+// for desktop
 @media screen and (min-width: 55rem) {
     main {
         margin: 8rem 13rem 0;
@@ -39,6 +39,7 @@ main {
 }
 
 section {
+    width: 80%;
     margin-bottom: 5rem;
 }
 
@@ -105,4 +106,6 @@ button:hover {
     cursor: pointer;
     color: $light-purple;
     transition: 500ms ease-in-out;
+    border-radius: 30px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
 }

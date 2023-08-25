@@ -2,17 +2,16 @@
 @import "./variables";
 
 // HOME
-
 .home {
-    margin-bottom: 8rem;
+    margin-bottom: 10rem;
 }
 
 .home__contacts {
     @include grid;
-    top: 25%;
+    top: 50%;
     font-size: fs(h3);
-    margin-right: 5rem;
-    position: absolute;
+    // margin-right: 5rem;
+    position: relative;
 }
 
 .home__contacts:hover {
@@ -29,6 +28,11 @@
 
 .home__profile {
     grid-area: profile;
+
+    & img {
+        max-width: 650px;
+        padding: 2rem;
+    }
 }
 
 @media screen and (min-width: 55rem) {
@@ -50,7 +54,7 @@
 }
 
 .home__scroll-down {
-    // margin-top: 8rem;
+    padding-top: 8rem;
     animation: bounce 2s infinite;
 }
 
@@ -58,19 +62,23 @@
    font-size: 1rem; 
 }
 
+
+
+
 // ABOUT
 .about__content button i {
     animation: bounce 3s infinite;
 }
 
-// SKILLS TABS
-.skills {
-    width: 100%;
-}
 
+
+
+// SKILLS
 .skills__container {
     @include grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 0;
+    //grid-template-columns: repeat(auto-fill, minmax(250px, 400px));
+    // grid-auto-columns: minmax(300px, auto);
 }
 
 .skills__content {
@@ -107,13 +115,14 @@
 
 .skills__list {
     @include grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    //grid-template-columns: repeat(auto-fill, minmax(250px, auto));
 }
 
 .skills__data {
     @include flex(row);
     padding: 0.5rem 0;
     width: fit-content;
+    height: fit-content;
 
     & .skill {
         //margin-left: 1rem;
@@ -121,56 +130,72 @@
     }
 }
 
-.skills__close .skills__list {
-    height: 0;
+.skills-swiper {
+    max-width: 500px;
+    height: 650px;
+    background-color: orange;
+}
+
+.swiper-slide {
+    @include flex(column);
+    justify-content: center;
     overflow: hidden;
-    transition: height 0.5s ease-in-out;
 }
 
-.skills__close .skills__header {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0; 
+.skills__close {
+    & .skills__list {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
+    }
+
+    & .skills__header {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0; 
+    }
+
+    & .skill-arrow {
+        animation: bounce 3s infinite;
+        animation: colorChange 3s infinite;
+    }
+
+    & .skills__header .skill-icon {
+        animation: colorChange 3s infinite;
+    }
 }
 
-.skills__close .skill-arrow {
-    animation: bounce 3s infinite;
-    animation: colorChange 3s infinite;
+.skills__open {
+    & .skills__list {
+        height: max-content;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
+    }
+
+    & .skill-arrow {
+        transition: .5s;
+        color: var(--font-accent);
+        transform: rotate(-180deg);
+    }
+
+    & .skills__header div:first-child i {
+        color: var(--font-accent);
+        transition: .5s;
+        transform: rotate(360deg);
+    }
 }
 
-.skills__close .skills__header .skill-icon {
-    animation: colorChange 3s infinite;
-}
 
-.skills__open .skills__list {
-    height: max-content;
-    overflow: hidden;
-    transition: height 0.5s ease-in-out;
-}
 
-.skills__open .skill-arrow {
-    transition: .5s;
-    color: var(--font-accent);
-    transform: rotate(-180deg);
-}
 
-.skills__open .skills__header div:first-child i {
-    color: var(--font-accent);
-    transition: .5s;
-    transform: rotate(360deg);
-}
-
-// PROJECTS
-// .swiper {
-//     width: 600px;
-//     height: 600px;
-// }
-
-.swipper-wrapper {
-    height: auto;
+//PROJECTS
+.projects-swiper {
+    max-width: 1250px;
+    @include flex(column);
+    justify-content: center;
+    background-color: aqua;
 }
 
 .project-img {
     width: 200px;
 }
-

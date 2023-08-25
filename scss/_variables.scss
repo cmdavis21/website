@@ -51,6 +51,9 @@ $text-decoration: (
     @return map-get($text-decoration, $decoration);
 }
 
+// BOX SHADOW
+//$shadow: 
+
 // FLEX
 @mixin flex($direction) {
     display: flex;
@@ -61,7 +64,7 @@ $text-decoration: (
 // GRID
 @mixin grid() {
     display: grid;
-    gap: 1rem;
+    gap: 2em;
 }
 
 // SLOW BOUNCE ANIMATION

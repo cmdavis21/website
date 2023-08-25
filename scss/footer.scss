@@ -24,7 +24,6 @@ footer {
     }
 
     & .logo {
-        font-size: 2.5rem;
         animation: shift 1.5s infinite;
     }
 
@@ -35,10 +34,10 @@ footer {
     & .contact-icon {
         font-size: 1.3rem;
         padding: 1rem;
-    }
 
-    & .contact-icon:hover {
-        color: $light-purple;
+        &:hover {
+            color: $light-purple;
+        }
     }
 }
 
@@ -58,8 +57,20 @@ footer {
     grid-row: 1 / 2;
 }
 
-.footer__item a {
-    color: $white;
+.footer__item {
+    padding: 0.5em;
+    @include flex(column);
+    justify-content: center;
+    grid-row: span 2;
+
+    & a {
+        color: $white;
+    } 
+}
+
+.footer__item:hover {
+    border-radius: 30px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .8);
 }
 
 .copyright {

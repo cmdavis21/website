@@ -16,10 +16,11 @@
         <link rel="stylesheet" href="./css/navbar.css">
         <link rel="stylesheet" href="./css/footer.css">
         <link rel="stylesheet" href="./css/main.css">
+        <!-- Swiper JS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
         <!-- JS -->
         <script src="./js/app.js" type="module" defer></script>
+        <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
         <!-- Browser Icon -->
@@ -65,7 +66,7 @@
                             <a href="https://www.linkedin.com/in/chynamdavis/" target="_blank"><i class="fa-brands fa-linkedin-in contact-icon"></i></a>
                             <a href="https://github.com/cmdavis21" target="_blank"><i class="fa-brands fa-github contact-icon"></i></a>
                         </div>
-                        <img src="./images/profile_img.png" width="500px">
+                        <img src="./images/profile_img.png">
                     </div>
 
                     <div class="home__text">
@@ -98,144 +99,150 @@
             <section class="skills" id="skills">
                 <h2 class="title">Experience</h2>
                 <span class="subtitle">Technical Skills and Certifications</span>
-                <div class="skills__container">
-                    <!-- FRONTEND SKILLS -->
-                    <div class="skills__content skills__open">
-                        <div class="skills__header">
-                            <div>
-                                <i class="fa-solid fa-code skill-icon"></i> 
-                                <p class="skill__title">Frontend Developer</p>
+                <div class="skills__container skills-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- FRONTEND SKILLS -->
+                        <div class="skills__content skills__ swiper-slide">
+                            <div class="skills__header">
+                                <div>
+                                    <i class="fa-solid fa-code skill-icon"></i> 
+                                    <p class="skill__title">Frontend Developer</p>
+                                </div>
+                                <i class="fa-solid fa-caret-down skill-arrow"></i> <!-- For dropdown -->
                             </div>
-                            <i class="fa-solid fa-caret-down skill-arrow"></i> <!-- For dropdown -->
+
+                            <div class="skills__list">
+                                <div class="skills__data">
+                                    <i class="fa-brands fa-html5 skill-icon"></i>
+                                    <p class="skill">HTML</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="fa-brands fa-css3-alt skill-icon"></i>
+                                    <p class="skill">CSS</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="fa-brands fa-sass skill-icon"></i>
+                                    <p class="skill">SCSS</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="fa-brands fa-square-js skill-icon"></i>
+                                    <p class="skill">JavaScript</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="fa-brands fa-bootstrap skill-icon"></i>
+                                    <p class="skill">Bootstrap</p>
+                                </div> 
+                            </div>
                         </div>
 
-                        <div class="skills__list">
-                            <div class="skills__data">
-                                <i class="fa-brands fa-html5 skill-icon"></i>
-                                <p class="skill">HTML</p>
+                        <!-- BACKEND SKILLS -->
+                        <div class="skills__content skills__ swiper-slide">
+                            <div class="skills__header">
+                                <div>
+                                    <i class="fa-solid fa-server skill-icon"></i>
+                                    <p class="skill__title">Backend Developer</p>
+                                </div>
+                                <i class="fa-solid fa-caret-down skill-arrow"></i> <!-- For dropdown -->
                             </div>
-                            <div class="skills__data">
-                                <i class="fa-brands fa-css3-alt skill-icon"></i>
-                                <p class="skill">CSS</p>
-                            </div>
-                            <div class="skills__data">
-                                <i class="fa-brands fa-sass skill-icon"></i>
-                                <p class="skill">SCSS</p>
-                            </div>
-                            <div class="skills__data">
-                                <i class="fa-brands fa-square-js skill-icon"></i>
-                                <p class="skill">JavaScript</p>
-                            </div>
-                            <div class="skills__data">
-                                <i class="fa-brands fa-bootstrap skill-icon"></i>
-                                <p class="skill">Bootstrap</p>
-                            </div> 
-                        </div>
-                    </div>
 
-                    <!-- BACKEND SKILLS -->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <div>
-                                <i class="fa-solid fa-server skill-icon"></i>
-                                <p class="skill__title">Backend Developer</p>
+                            <div class="skills__list">
+                                <div class="skills__data">
+                                    <i class="fa-brands fa-java skill-icon"></i>
+                                    <p class="skill">Java</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="devicon-spring-plain skill-icon"></i>
+                                    <p class="skill">Spring Boot, Spring Data JPA, and Spring Security (JWT)</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="fa-solid fa-cloud-arrow-up skill-icon"></i>
+                                    <p class="skill">REST API's</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="devicon-mysql-plain skill-icon"></i>
+                                    <p class="skill">SQL</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="fa-solid fa-vial-virus skill-icon"></i>
+                                    <p class="skill">Unit Testing (JUnit, Mockito)</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="fa-solid fa-layer-group skill-icon"></i>
+                                    <p class="skill">SOLID OOP Principles</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="fa-solid fa-plug skill-icon"></i>
+                                    <p class="skill">Dependency Injection</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="fa-brands fa-docker skill-icon"></i>
+                                    <p class="skill">Docker</p>
+                                </div>
                             </div>
-                            <i class="fa-solid fa-caret-down skill-arrow"></i> <!-- For dropdown -->
-                        </div>
-
-                        <div class="skills__list">
-                            <div class="skills__data">
-                                <i class="fa-brands fa-java skill-icon"></i>
-                                <p class="skill">Java</p>
-                            </div>
-                            <div class="skills__data">
-                                <i class="devicon-spring-plain skill-icon"></i>
-                                <p class="skill">Spring Boot, Spring Data JPA, and Spring Security (JWT)</p>
-                            </div>
-                            <div class="skills__data">
-                                <i class="fa-solid fa-cloud-arrow-up skill-icon"></i>
-                                <p class="skill">REST API's</p>
-                            </div>
-                            <div class="skills__data">
-                                <i class="devicon-mysql-plain skill-icon"></i>
-                                <p class="skill">SQL</p>
-                            </div>
-                            <div class="skills__data">
-                                <i class="fa-solid fa-vial-virus skill-icon"></i>
-                                <p class="skill">Unit Testing (JUnit, Mockito)</p>
-                            </div>
-                            <div class="skills__data">
-                                <i class="fa-solid fa-layer-group skill-icon"></i>
-                                <p class="skill">SOLID OOP Principles</p>
-                            </div>
-                            <div class="skills__data">
-                                <i class="fa-solid fa-plug skill-icon"></i>
-                                <p class="skill">Dependency Injection</p>
-                            </div>
-                            <div class="skills__data">
-                                <i class="fa-brands fa-docker skill-icon"></i>
-                                <p class="skill">Docker</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- OTHER SKILLS -->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <div>
-                                <i class="fa-solid fa-code-branch skill-icon"></i>
-                                <p class="skill__title">Other Skills</p>
-                            </div>
-                            <i class="fa-solid fa-caret-down skill-arrow"></i> <!-- For dropdown -->
                         </div>
 
-                        <div class="skills__list">
-                            <div class="skills__data">
-                                <i class="devicon-git-plain skill-icon"></i>                
-                                <p class="skill">Git</p>
+                        <!-- OTHER SKILLS -->
+                        <div class="skills__content skills__ swiper-slide">
+                            <div class="skills__header">
+                                <div>
+                                    <i class="fa-solid fa-code-branch skill-icon"></i>
+                                    <p class="skill__title">Other Skills</p>
+                                </div>
+                                <i class="fa-solid fa-caret-down skill-arrow"></i> <!-- For dropdown -->
                             </div>
-                            <div class="skills__data">
-                                <i class="devicon-canva-original skill-icon"></i>                
-                                <p class="skill">Canva</p>
-                            </div>
-                            <div class="skills__data">
-                                <i class="devicon-figma-plain skill-icon"></i>                         
-                                <p class="skill">Figma</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- CERTIFICATIONS -->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header"> 
-                            <div>
-                                <i class="fa-solid fa-award skill-icon"></i>  
-                                <p class="skill__title">Certifications</p>
+                            <div class="skills__list">
+                                <div class="skills__data">
+                                    <i class="devicon-git-plain skill-icon"></i>                
+                                    <p class="skill">Git</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="devicon-canva-original skill-icon"></i>                
+                                    <p class="skill">Canva</p>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="devicon-figma-plain skill-icon"></i>                         
+                                    <p class="skill">Figma</p>
+                                </div>
                             </div>
-                            <i class="fa-solid fa-caret-down skill-arrow"></i> <!-- For dropdown -->
                         </div>
 
-                        <div class="skills__list">
-                            <div class="skills__data">             
-                                <p class="skill">Certified JavaScript Developer</p>
-                                <p>w3schools | May 2023</p>
+                        <!-- CERTIFICATIONS -->
+                        <div class="skills__content skills__ swiper-slide">
+                            <div class="skills__header"> 
+                                <div>
+                                    <i class="fa-solid fa-award skill-icon"></i>  
+                                    <p class="skill__title">Certifications</p>
+                                </div>
+                                <i class="fa-solid fa-caret-down skill-arrow"></i> <!-- For dropdown -->
+                            </div>
+
+                            <div class="skills__list">
+                                <div class="skills__data">             
+                                    <p class="skill">Certified JavaScript Developer</p>
+                                    <p>w3schools | May 2023</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div>  
+
+                    <div class="swiper-pagination "></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </section>
 
             <!-- PROJECTS CAROUSEL -->
             <section class="projects" id="projects">
-                <h2 class="title">Featured Projects</h2>
+                <h2 class="title">Projects</h2>
                 <span class="subtitle">and recent work</span>
-                <div class="projects__container swiper">
+                <div class="projects__container projects-swiper">
                     <div class="swiper-wrapper">
                         <!-- PROJECT 1 -->
                         <div class="projects__content swiper-slide">
                             <img src="./images/coming-soon.png" class="project-img" alt="">
                             <div class="project__data">
-                                <h3 class="project__title">Lorem ipsum dolor</h3>
+                                <p class="project__title">Lorem ipsum dolor</p>
                                 <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 <button><a href="#">Github Repo</a></button>
                                 <button><a href="#">View Live Project</a></button>
@@ -246,7 +253,7 @@
                         <div class="projects__content swiper-slide">
                             <img src="./images/coming-soon.png" class="project-img" alt="">
                             <div class="project__data">
-                                <h3 class="project__title">Lorem ipsum dolor</h3>
+                                <p class="project__title">Lorem ipsum dolor</p>
                                 <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 <button><a href="#">Github Repo</a></button>
                                 <button><a href="#">View Live Project</a></button>
@@ -257,7 +264,7 @@
                         <div class="projects__content swiper-slide">
                             <img src="./images/coming-soon.png" class="project-img" alt="">
                             <div class="project__data">
-                                <h3 class="project__title">Lorem ipsum dolor</h3>
+                                <p class="project__title">Lorem ipsum dolor</p>
                                 <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 <button><a href="#">Github Repo</a></button>
                                 <button><a href="#">View Live Project</a></button>
@@ -266,18 +273,17 @@
                     </div>
 
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                     <div class="swiper-scrollbar"></div>
                 </div>
             </section>
 
-            <!-- <h2 class="section__title">Other Projects</h2> -->
+            <!-- <h2 class="title">More Projects</h2> -->
             <!-- grid tiles display auto rows/columns of projects -->
             <!-- js/java inject tiles into here -->
-            <!-- tile ideas: http://findmatthew.com/ -->     
+            <!-- inspiration: http://findmatthew.com/ -->     
         </main>
 
+        <!-- FOOTER -->
         <footer>
             <div class="footer__content">
                 <a href="#home" class="logo">Chyna</a>
